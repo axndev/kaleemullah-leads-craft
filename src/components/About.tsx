@@ -53,7 +53,7 @@ const About = () => {
             </div>
 
             {/* Highlights grid */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {highlights.map((item, index) => {
                 const Icon = item.icon;
                 return (

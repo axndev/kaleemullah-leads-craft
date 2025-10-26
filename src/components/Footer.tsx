@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-foreground">Get In Touch</h4>
               <div className="space-y-2 text-muted-foreground">
-                <p>kaleem@example.com</p>
+                <p>kaleemullahahsan0@gmail.com</p>
                 <p>Available for freelance opportunities</p>
                 <Button 
                   className="mt-4 bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
