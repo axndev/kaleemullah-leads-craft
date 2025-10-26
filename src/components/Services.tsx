@@ -30,7 +30,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-15 sm:py-20 bg-background">
+    <section id="services" className="py-24 sm:py-20 bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
