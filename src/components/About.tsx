@@ -25,7 +25,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-gradient-subtle">
+    <section id="about" className="py-15 sm:py-20 bg-gradient-subtle">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
@@ -42,7 +42,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in-up">
               <p className="text-lg text-foreground leading-relaxed">
-                With over 5 years of experience in web development, I've helped businesses and individuals bring their digital visions to life. My expertise spans across WordPress development, modern frontend frameworks like React and Vue, and creating user experiences that convert.
+                With over 3 years of experience in web development, I've helped businesses and individuals bring their digital visions to life. My expertise spans across WordPress development, modern frontend frameworks like React and Vue, and creating user experiences that convert.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I believe in the power of clean code, thoughtful design, and strategic thinking. Every project is an opportunity to push boundaries and deliver solutions that not only look stunning but drive real business results.
