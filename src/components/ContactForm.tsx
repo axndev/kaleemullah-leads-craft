@@ -6,11 +6,12 @@ import { Card } from "@/components/ui/card";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import emailjs from "emailjs-com";
 
 const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  message: z.string().trim().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters")
+  name: z.string().trim().min(1, "Name is required"),
+  email: z.string().trim().email("Invalid email address"),
+  message: z.string().trim().min(10, "Message must be at least 10 characters")
 });
 
 const ContactForm = () => {
@@ -28,21 +29,37 @@ const ContactForm = () => {
 
     try {
       const validatedData = contactSchema.parse(formData);
-      
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
+      // 🚀 Send via EmailJS
+      await emailjs.send(
+        "service_6zvpn0u", // 🔹 e.g. "service_abc123"
+        "template_rr9anr6", // 🔹 e.g. "template_xyz456"
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "iShj6zB-TpNYWsav7" // 🔹 e.g. "tK5o6abcdEfG7Hi8J"
+      );
+
       toast({
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
-      
+
       setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
+    } catch (error: any) {
       if (error instanceof z.ZodError) {
         toast({
           title: "Validation Error",
           description: error.issues[0].message,
+          variant: "destructive",
+        });
+      } else {
+        console.error(error);
+        toast({
+          title: "Error sending message",
+          description: "Something went wrong. Please try again later.",
           variant: "destructive",
         });
       }
@@ -62,7 +79,6 @@ const ContactForm = () => {
     <section id="contact" className="py-24 sm:py-32 bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-16">
-          {/* Header */}
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               Let's Collaborate
@@ -72,7 +88,6 @@ const ContactForm = () => {
             </p>
           </div>
 
-          {/* Form */}
           <Card className="p-8 sm:p-12 bg-card border-2 border-border shadow-elegant animate-scale-in">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-6">
