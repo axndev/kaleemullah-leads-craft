@@ -76,7 +76,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-20 bg-background">
+    <section id="contact" className="py-20 sm:py-20 bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-16">
           <div className="text-center space-y-4 animate-fade-in">

@@ -25,7 +25,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 sm:py-20 bg-gradient-subtle">
+    <section id="about" className="py-20 sm:py-20 bg-gradient-subtle">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
