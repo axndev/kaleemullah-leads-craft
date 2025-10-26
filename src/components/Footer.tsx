@@ -1,0 +1,97 @@
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Footer = () => {
+  const socialLinks = [
+    { icon: Mail, href: "mailto:kaleem@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Twitter, href: "https://twitter.com", label: "Twitter" }
+  ];
+
+  const navLinks = [
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Portfolio", href: "#portfolio" },
+    { label: "Contact", href: "#contact" }
+  ];
+
+  return (
+    <footer className="bg-gradient-subtle border-t border-border">
+      <div className="container px-4 sm:px-6 lg:px-8">
+        <div className="py-12 sm:py-16">
+          <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            {/* Brand */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">
+                Kaleemullah Ahsan
+              </h3>
+              <p className="text-muted-foreground">
+                WordPress & Frontend Developer crafting exceptional digital experiences.
+              </p>
+              <div className="flex gap-2">
+                {socialLinks.map((social, index) => {
+                  const Icon = social.icon;
+                  return (
+                    <Button
+                      key={index}
+                      size="icon"
+                      variant="outline"
+                      className="border-2 hover:border-primary hover:text-primary transition-all duration-300"
+                      asChild
+                    >
+                      <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                        <Icon className="w-5 h-5" />
+                      </a>
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-foreground">Quick Links</h4>
+              <nav className="flex flex-col space-y-2">
+                {navLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-foreground">Get In Touch</h4>
+              <div className="space-y-2 text-muted-foreground">
+                <p>kaleem@example.com</p>
+                <p>Available for freelance opportunities</p>
+                <Button 
+                  className="mt-4 bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Start a Project
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-border py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+            <p>© 2024 Kaleemullah Ahsan. All rights reserved.</p>
+            <p>Built with passion and clean code ✨</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
