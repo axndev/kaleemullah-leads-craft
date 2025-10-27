@@ -19,8 +19,8 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-subtle dark:bg-card/30 dark:backdrop-blur-sm border-t border-border dark:border-border/50">
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="py-12 sm:py-16">
-          <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <div className="py-10 sm:py-14 lg:py-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 max-w-6xl mx-auto">
             {/* Brand */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">

@@ -55,9 +55,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 sm:py-32 bg-gradient-subtle dark:bg-background">
+    <section id="portfolio" className="py-16 sm:py-24 lg:py-32 bg-gradient-subtle dark:bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto space-y-16">
+        <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16 lg:space-y-20">
           {/* Header */}
           <div className="text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">

@@ -25,12 +25,12 @@ const WhyChooseMe = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-32 bg-gradient-hero relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 bg-gradient-hero relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIiBzdHJva2Utd2lkdGg9IjIiLz48L2c+PC9zdmc+')] opacity-30 animate-parallax" />
       
       <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-6xl mx-auto space-y-16">
+        <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16 lg:space-y-20">
           {/* Header */}
           <div className="text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
@@ -42,7 +42,7 @@ const WhyChooseMe = () => {
           </div>
 
           {/* Reasons grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 animate-scroll-stagger">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 animate-scroll-stagger">
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (

@@ -10,16 +10,16 @@ export const useScrollAnimation = () => {
     gsap.utils.toArray<HTMLElement>(".animate-scroll-fade").forEach((element) => {
       gsap.fromTo(
         element,
-        { y: 80, opacity: 0 },
+        { y: 50, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
-          ease: "power3.out",
+          duration: 1.2,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: element,
-            start: "top 85%",
-            end: "top 60%",
+            start: "top 88%",
+            end: "top 65%",
             toggleActions: "play none none reverse",
           },
         }
@@ -31,17 +31,17 @@ export const useScrollAnimation = () => {
       const children = container.children;
       gsap.fromTo(
         children,
-        { y: 60, opacity: 0 },
+        { y: 40, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power3.out",
+          duration: 1,
+          stagger: 0.12,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: container,
-            start: "top 80%",
-            end: "top 50%",
+            start: "top 85%",
+            end: "top 55%",
             toggleActions: "play none none reverse",
           },
         }
@@ -52,16 +52,16 @@ export const useScrollAnimation = () => {
     gsap.utils.toArray<HTMLElement>(".animate-scroll-scale").forEach((element) => {
       gsap.fromTo(
         element,
-        { scale: 0.8, opacity: 0 },
+        { scale: 0.92, opacity: 0 },
         {
           scale: 1,
           opacity: 1,
-          duration: 1,
-          ease: "back.out(1.4)",
+          duration: 1.2,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: element,
-            start: "top 85%",
-            end: "top 60%",
+            start: "top 88%",
+            end: "top 65%",
             toggleActions: "play none none reverse",
           },
         }
@@ -72,16 +72,16 @@ export const useScrollAnimation = () => {
     gsap.utils.toArray<HTMLElement>(".animate-scroll-left").forEach((element) => {
       gsap.fromTo(
         element,
-        { x: -100, opacity: 0 },
+        { x: -60, opacity: 0 },
         {
           x: 0,
           opacity: 1,
-          duration: 1,
-          ease: "power3.out",
+          duration: 1.2,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: element,
-            start: "top 85%",
-            end: "top 60%",
+            start: "top 88%",
+            end: "top 65%",
             toggleActions: "play none none reverse",
           },
         }
@@ -92,16 +92,16 @@ export const useScrollAnimation = () => {
     gsap.utils.toArray<HTMLElement>(".animate-scroll-right").forEach((element) => {
       gsap.fromTo(
         element,
-        { x: 100, opacity: 0 },
+        { x: 60, opacity: 0 },
         {
           x: 0,
           opacity: 1,
-          duration: 1,
-          ease: "power3.out",
+          duration: 1.2,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: element,
-            start: "top 85%",
-            end: "top 60%",
+            start: "top 88%",
+            end: "top 65%",
             toggleActions: "play none none reverse",
           },
         }

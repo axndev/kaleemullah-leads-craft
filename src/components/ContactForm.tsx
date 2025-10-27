@@ -76,9 +76,9 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-background">
+    <section id="contact" className="py-16 sm:py-24 lg:py-32 bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-16">
+        <div className="max-w-4xl mx-auto space-y-12 sm:space-y-16 lg:space-y-20">
           <div className="text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               Let's Collaborate
@@ -88,9 +88,9 @@ const ContactForm = () => {
             </p>
           </div>
 
-          <Card className="p-8 sm:p-12 bg-card border-2 border-border shadow-elegant animate-scroll-scale">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
+          <Card className="p-6 sm:p-8 lg:p-10 bg-card border-2 border-border shadow-elegant animate-scroll-scale">
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-foreground">
                     Your Name
@@ -142,7 +142,7 @@ const ContactForm = () => {
                 type="submit" 
                 size="lg"
                 disabled={isSubmitting}
-                className="w-full sm:w-auto bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
+                className="w-full sm:w-auto"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send className="ml-2 h-5 w-5" />

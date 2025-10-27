@@ -27,9 +27,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 sm:py-32 bg-background">
+    <section id="testimonials" className="py-16 sm:py-24 lg:py-32 bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-16">
+        <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16 lg:space-y-20">
           {/* Header */}
           <div className="text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
@@ -41,7 +41,7 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonials grid */}
-          <div className="grid md:grid-cols-3 gap-8 animate-scroll-stagger">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 animate-scroll-stagger">
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index}

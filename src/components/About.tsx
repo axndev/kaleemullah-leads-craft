@@ -25,9 +25,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 sm:py-32 bg-gradient-subtle dark:bg-background">
+    <section id="about" className="py-16 sm:py-24 lg:py-32 bg-gradient-subtle dark:bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-16">
+        <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16 lg:space-y-20">
           {/* Header */}
           <div className="text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
@@ -39,8 +39,8 @@ const About = () => {
           </div>
 
           {/* Main content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-scroll-left">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+            <div className="space-y-4 sm:space-y-6 animate-scroll-left">
               <p className="text-lg text-foreground leading-relaxed">
                 With over 3 years of experience in web development, I've helped businesses and individuals bring their digital visions to life. My expertise spans across WordPress development, modern frontend frameworks like React and Vue, and creating user experiences that convert.
               </p>
@@ -53,7 +53,7 @@ const About = () => {
             </div>
 
             {/* Highlights grid */}
-            <div className="grid md:grid-cols-2 gap-6 animate-scroll-stagger">
+            <div className="grid sm:grid-cols-2 gap-4 animate-scroll-stagger">
               {highlights.map((item, index) => {
                 const Icon = item.icon;
                 return (
