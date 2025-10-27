@@ -76,10 +76,10 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-20 bg-background">
+    <section id="contact" className="py-20 sm:py-32 bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-16">
-          <div className="text-center space-y-4 animate-fade-in">
+          <div className="text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               Let's Collaborate
             </h2>
@@ -88,7 +88,7 @@ const ContactForm = () => {
             </p>
           </div>
 
-          <Card className="p-8 sm:p-12 bg-card border-2 border-border shadow-elegant animate-scale-in">
+          <Card className="p-8 sm:p-12 bg-card border-2 border-border shadow-elegant animate-scroll-scale">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="space-y-2">

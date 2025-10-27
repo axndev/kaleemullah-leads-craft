@@ -55,11 +55,11 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 sm:py-20 bg-gradient-subtle">
+    <section id="portfolio" className="py-20 sm:py-32 bg-gradient-subtle">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-16">
           {/* Header */}
-          <div className="text-center space-y-4 animate-fade-in">
+          <div className="text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               Featured Work
             </h2>
@@ -69,12 +69,11 @@ const Portfolio = () => {
           </div>
 
           {/* Projects grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 animate-scroll-stagger">
             {projects.map((project, index) => (
               <Card 
                 key={index}
-                className="group overflow-hidden bg-card border-2 border-border hover:border-primary transition-all duration-500 hover:shadow-elegant animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group overflow-hidden bg-card border-2 border-border hover:border-primary transition-all duration-500 hover:shadow-elegant"
               >
                 <div className="relative aspect-video overflow-hidden">
                   <img 

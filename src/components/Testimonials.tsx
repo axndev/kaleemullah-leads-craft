@@ -27,11 +27,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 sm:py-20 bg-background">
+    <section id="testimonials" className="py-20 sm:py-32 bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Header */}
-          <div className="text-center space-y-4 animate-fade-in">
+          <div className="text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               Client Testimonials
             </h2>
@@ -41,12 +41,11 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonials grid */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 animate-scroll-stagger">
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index}
-                className="group p-8 bg-card border-2 border-border hover:border-primary transition-all duration-500 hover:shadow-elegant animate-scale-in relative overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group p-8 bg-card border-2 border-border hover:border-primary transition-all duration-500 hover:shadow-elegant relative overflow-hidden"
               >
                 <Quote className="absolute top-6 right-6 w-12 h-12 text-primary/10 group-hover:text-primary/20 transition-colors" />
                 
