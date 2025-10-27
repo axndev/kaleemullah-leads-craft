@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-subtle border-t border-border">
+    <footer className="bg-gradient-subtle dark:bg-card/30 dark:backdrop-blur-sm border-t border-border dark:border-border/50">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="py-12 sm:py-16">
           <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
@@ -37,7 +37,7 @@ const Footer = () => {
                       key={index}
                       size="icon"
                       variant="outline"
-                      className="border-2 hover:border-primary hover:text-primary transition-all duration-300"
+                      className="border-2 border-border dark:border-border/50 hover:border-primary dark:hover:border-primary hover:text-primary dark:bg-card/50 transition-all duration-300"
                       asChild
                     >
                       <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>

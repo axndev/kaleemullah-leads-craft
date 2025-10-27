@@ -55,7 +55,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 sm:py-32 bg-gradient-subtle">
+    <section id="portfolio" className="py-20 sm:py-32 bg-gradient-subtle dark:bg-background">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-16">
           {/* Header */}
@@ -73,7 +73,7 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <Card 
                 key={index}
-                className="group overflow-hidden bg-card border-2 border-border hover:border-primary transition-all duration-500 hover:shadow-elegant"
+                className="group overflow-hidden bg-card dark:bg-card/50 dark:backdrop-blur-sm border-2 border-border dark:border-border/50 hover:border-primary dark:hover:border-primary transition-all duration-500 hover:shadow-elegant dark:hover:shadow-glow-primary"
               >
                 <div className="relative aspect-video overflow-hidden">
                   <img 
@@ -81,7 +81,7 @@ const Portfolio = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 dark:from-background/98 via-background/70 dark:via-background/85 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
                     <Button 
                       size="sm" 
                       className="bg-primary hover:bg-primary/90"
@@ -92,7 +92,7 @@ const Portfolio = () => {
                     <Button 
                       size="sm" 
                       variant="outline"
-                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      className="border-2 border-primary text-primary bg-background/50 dark:bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground"
                     >
                       <Github className="w-4 h-4 mr-2" />
                       Code
