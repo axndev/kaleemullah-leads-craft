@@ -17,7 +17,7 @@ const ImageShowcase = () => {
   return (
     <section
       ref={containerRef}
-      className="relative py-20 md:py-32 overflow-hidden"
+      className="relative py-12 md:py-20 overflow-hidden"
     >
       {/* Background gradient */}
       <motion.div
@@ -31,26 +31,27 @@ const ImageShowcase = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
             Creative Showcase
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Experience the intersection of design and functionality
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
           {/* Interactive Image Section */}
           <motion.div
             style={{ y: springY, scale }}
             className="relative group"
           >
             <motion.div
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ duration: 0.4 }}
-              className="relative aspect-square rounded-2xl overflow-hidden shadow-elegant backdrop-blur"
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant backdrop-blur"
+              style={{ transformStyle: "preserve-3d" }}
             >
               {/* Replace this src with your image */}
               <img
@@ -89,7 +90,7 @@ const ImageShowcase = () => {
             {/* Floating elements */}
             <motion.div
               animate={{
-                y: [0, -20, 0],
+                y: [0, -15, 0],
                 rotate: [0, 5, 0],
               }}
               transition={{
@@ -97,11 +98,11 @@ const ImageShowcase = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl"
+              className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl"
             />
             <motion.div
               animate={{
-                y: [0, 20, 0],
+                y: [0, 15, 0],
                 rotate: [0, -5, 0],
               }}
               transition={{
@@ -109,7 +110,7 @@ const ImageShowcase = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full bg-gradient-to-br from-accent/20 to-primary-glow/20 blur-2xl"
+              className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-gradient-to-br from-accent/20 to-primary-glow/20 blur-2xl"
             />
           </motion.div>
 
@@ -121,17 +122,17 @@ const ImageShowcase = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="space-y-4">
+            <div className="space-y-3">
               <motion.div
                 whileHover={{ x: 10 }}
-                className="flex items-start gap-4 p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
+                className="flex items-start gap-3 p-4 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
               >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center text-white font-bold">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center text-white font-bold text-sm">
                   01
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Pixel Perfect Design</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="text-lg font-bold mb-1">Pixel Perfect Design</h3>
+                  <p className="text-sm text-muted-foreground">
                     Every detail matters in creating exceptional user experiences
                   </p>
                 </div>
@@ -139,14 +140,14 @@ const ImageShowcase = () => {
 
               <motion.div
                 whileHover={{ x: 10 }}
-                className="flex items-start gap-4 p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
+                className="flex items-start gap-3 p-4 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
               >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-glow to-accent flex items-center justify-center text-white font-bold">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-glow to-accent flex items-center justify-center text-white font-bold text-sm">
                   02
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Smooth Interactions</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="text-lg font-bold mb-1">Smooth Interactions</h3>
+                  <p className="text-sm text-muted-foreground">
                     Fluid animations that enhance user engagement
                   </p>
                 </div>
@@ -154,14 +155,14 @@ const ImageShowcase = () => {
 
               <motion.div
                 whileHover={{ x: 10 }}
-                className="flex items-start gap-4 p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
+                className="flex items-start gap-3 p-4 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
               >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white font-bold">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white font-bold text-sm">
                   03
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Performance First</h3>
-                  <p className="text-muted-foreground">
+                  <h3 className="text-lg font-bold mb-1">Performance First</h3>
+                  <p className="text-sm text-muted-foreground">
                     Optimized for speed without compromising quality
                   </p>
                 </div>

@@ -101,6 +101,35 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    cursor: none;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      cursor: auto;
+    }
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Hide default scrollbar for cleaner look */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
   }
 }
 

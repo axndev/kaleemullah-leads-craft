@@ -11,6 +11,8 @@ import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
 import MouseFollower from "@/components/MouseFollower";
 import ImageShowcase from "@/components/ImageShowcase";
+import BackToTop from "@/components/BackToTop";
+import Marquee from "@/components/Marquee";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLocomotiveScroll } from "@/hooks/useLocomotiveScroll";
 
@@ -32,15 +34,26 @@ const Index = () => {
     return <Loader onLoadComplete={() => setLoading(false)} />;
   }
 
+  const marqueeItems = [
+    "WordPress Expert",
+    "React Developer",
+    "Vue.js Specialist",
+    "UI/UX Designer",
+    "Frontend Master",
+  ];
+
   return (
     <>
       <MouseFollower />
+      <BackToTop />
       <main className="min-h-screen bg-background" data-scroll-container>
         <Header />
         <Hero />
+        <Marquee items={marqueeItems} speed={30} />
         <About />
         <ImageShowcase />
         <Services />
+        <Marquee items={marqueeItems} speed={35} direction="right" />
         <Portfolio />
         <Testimonials />
         <WhyChooseMe />

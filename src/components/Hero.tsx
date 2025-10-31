@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -20,8 +21,31 @@ const Hero = () => {
       </div>
 
       {/* Animated gradient orbs */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{
+          scale: [1.2, 1, 1.2],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+        className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
+      />
 
       {/* Content */}
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
@@ -43,39 +67,65 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 sm:pt-4">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto group bg-gradient-primary text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
-              onClick={scrollToContact}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Let's Work Together
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2"
-              onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
+              <Button 
+                size="lg" 
+                className="w-full sm:w-auto group bg-gradient-primary text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
+                onClick={scrollToContact}
+                data-cursor-text="Let's Talk!"
+              >
+                Let's Work Together
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              View My Work
-            </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2"
+                onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
+                data-cursor-text="View Projects"
+              >
+                View My Work
+              </Button>
+            </motion.div>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 pt-6 sm:pt-8 lg:pt-10 max-w-3xl mx-auto">
-            <div className="space-y-1 sm:space-y-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 pt-6 sm:pt-8 lg:pt-10 max-w-3xl mx-auto"
+          >
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="space-y-1 sm:space-y-2"
+            >
               <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">3+</p>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground">Years Experience</p>
-            </div>
-            <div className="space-y-1 sm:space-y-2">
+            </motion.div>
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="space-y-1 sm:space-y-2"
+            >
               <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">70+</p>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground">Projects Completed</p>
-            </div>
-            <div className="space-y-1 sm:space-y-2">
+            </motion.div>
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="space-y-1 sm:space-y-2"
+            >
               <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">50+</p>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground">Happy Clients</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
