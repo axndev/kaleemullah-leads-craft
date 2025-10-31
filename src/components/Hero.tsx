@@ -24,19 +24,19 @@ const Hero = () => {
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
+          opacity: [0.05, 0.1, 0.05],
         }}
         transition={{
           duration: 8,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+        className="absolute top-20 left-10 w-96 h-96 bg-foreground rounded-full blur-3xl"
       />
       <motion.div
         animate={{
           scale: [1.2, 1, 1.2],
-          opacity: [0.3, 0.5, 0.3],
+          opacity: [0.05, 0.1, 0.05],
         }}
         transition={{
           duration: 8,
@@ -44,7 +44,7 @@ const Hero = () => {
           ease: "easeInOut",
           delay: 1,
         }}
-        className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
+        className="absolute bottom-20 right-10 w-96 h-96 bg-foreground rounded-full blur-3xl"
       />
 
       {/* Content */}
@@ -52,8 +52,8 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 lg:space-y-10 animate-fade-in-up">
           <div className="space-y-4">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-              <span className="block text-foreground">Hi, I'm</span>
-              <span className="block bg-gradient-hero bg-clip-text text-transparent">
+              <span className="block text-muted-foreground">Hi, I'm</span>
+              <span className="block text-foreground">
                 Kaleemullah Ahsan
               </span>
             </h1>
@@ -73,9 +73,8 @@ const Hero = () => {
             >
               <Button 
                 size="lg" 
-                className="w-full sm:w-auto group bg-gradient-primary text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
+                className="w-full sm:w-auto group text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
                 onClick={scrollToContact}
-                data-cursor-text="Let's Talk!"
               >
                 Let's Work Together
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -88,9 +87,8 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2"
+                className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
                 onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
-                data-cursor-text="View Projects"
               >
                 View My Work
               </Button>
@@ -108,21 +106,21 @@ const Hero = () => {
               whileHover={{ y: -5 }}
               className="space-y-1 sm:space-y-2"
             >
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">3+</p>
+              <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">3+</p>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground">Years Experience</p>
             </motion.div>
             <motion.div
               whileHover={{ y: -5 }}
               className="space-y-1 sm:space-y-2"
             >
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">70+</p>
+              <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">70+</p>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground">Projects Completed</p>
             </motion.div>
             <motion.div
               whileHover={{ y: -5 }}
               className="space-y-1 sm:space-y-2"
             >
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">50+</p>
+              <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">50+</p>
               <p className="text-xs sm:text-sm lg:text-base text-muted-foreground">Happy Clients</p>
             </motion.div>
           </motion.div>

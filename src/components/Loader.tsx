@@ -29,7 +29,7 @@ const Loader = ({ onLoadComplete }: LoaderProps) => {
         initial={{ opacity: 1 }}
         exit={{ opacity: 0, scale: 1.1 }}
         transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-background via-background to-primary/5"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-background"
       >
         <div className="relative">
           {/* Animated circles */}
@@ -43,7 +43,7 @@ const Loader = ({ onLoadComplete }: LoaderProps) => {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="absolute -inset-20 rounded-full border border-primary/20"
+            className="absolute -inset-20 rounded-full border border-foreground/20"
           />
           <motion.div
             animate={{
@@ -55,7 +55,7 @@ const Loader = ({ onLoadComplete }: LoaderProps) => {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="absolute -inset-16 rounded-full border border-primary/30"
+            className="absolute -inset-16 rounded-full border border-foreground/30"
           />
 
           {/* Counter */}
@@ -64,7 +64,7 @@ const Loader = ({ onLoadComplete }: LoaderProps) => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-              className="text-8xl md:text-9xl font-bold bg-gradient-to-br from-primary via-primary-glow to-accent bg-clip-text text-transparent"
+              className="text-8xl md:text-9xl font-bold text-foreground"
             >
               {count}%
             </motion.div>
@@ -75,7 +75,7 @@ const Loader = ({ onLoadComplete }: LoaderProps) => {
                 initial={{ width: 0 }}
                 animate={{ width: `${count}%` }}
                 transition={{ duration: 0.1 }}
-                className="h-full bg-gradient-to-r from-primary via-primary-glow to-accent"
+                className="h-full bg-foreground"
               />
             </div>
 
@@ -109,7 +109,7 @@ const Loader = ({ onLoadComplete }: LoaderProps) => {
               repeat: Infinity,
               delay: Math.random() * 2,
             }}
-            className="absolute w-2 h-2 rounded-full bg-primary/40"
+            className="absolute w-2 h-2 rounded-full bg-foreground/30"
           />
         ))}
       </motion.div>

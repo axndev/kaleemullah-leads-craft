@@ -45,9 +45,9 @@ const Header = () => {
   return (
     <header
       className={`header-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-lg shadow-elegant border-b border-border"
-          : "bg-transparent"
+        isScrolled || isMobileMenuOpen
+          ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-border"
+          : "bg-background/60 backdrop-blur-sm"
       }`}
     >
       <div className="container px-4 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ const Header = () => {
               e.preventDefault();
               scrollToSection("#home");
             }}
-            className="text-xl sm:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="text-xl sm:text-2xl font-bold text-foreground hover:text-accent transition-colors"
           >
             Kaleemullah
           </a>
@@ -96,7 +96,7 @@ const Header = () => {
 
             <Button
               size="sm"
-              className="hidden sm:inline-flex bg-gradient-primary hover:shadow-glow-primary"
+              className="hidden sm:inline-flex"
               onClick={() => scrollToSection("#contact")}
             >
               Get in Touch
@@ -137,7 +137,7 @@ const Header = () => {
               ))}
               <Button
                 size="sm"
-                className="bg-gradient-primary hover:shadow-glow-primary w-full sm:hidden"
+                className="w-full sm:hidden"
                 onClick={() => scrollToSection("#contact")}
               >
                 Get in Touch

@@ -49,7 +49,7 @@ const MouseFollower = () => {
 
   return (
     <>
-      {/* Outer cursor */}
+      {/* Main cursor circle */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block"
         style={{
@@ -61,28 +61,16 @@ const MouseFollower = () => {
       >
         <motion.div
           animate={{
-            scale: isHovering ? 2 : 1,
-            width: cursorText ? "auto" : "40px",
-            height: cursorText ? "auto" : "40px",
+            scale: isHovering ? 1.5 : 1,
           }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className="rounded-full border-2 border-primary backdrop-blur-sm flex items-center justify-center px-4 py-2"
-        >
-          {cursorText && (
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-xs font-bold text-primary whitespace-nowrap"
-            >
-              {cursorText}
-            </motion.span>
-          )}
-        </motion.div>
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          className="w-8 h-8 rounded-full border border-foreground/30"
+        />
       </motion.div>
 
       {/* Inner cursor dot */}
       <motion.div
-        className="fixed top-0 left-0 w-1.5 h-1.5 pointer-events-none z-[9999] hidden md:block"
+        className="fixed top-0 left-0 w-1 h-1 pointer-events-none z-[9999] hidden md:block"
         style={{
           x: mousePosition.x,
           y: mousePosition.y,
@@ -92,11 +80,10 @@ const MouseFollower = () => {
       >
         <motion.div
           animate={{
-            scale: isHovering ? 0 : 1,
-            opacity: isHovering ? 0 : 1,
+            scale: isHovering ? 1.5 : 1,
           }}
           transition={{ duration: 0.2 }}
-          className="w-full h-full rounded-full bg-primary"
+          className="w-full h-full rounded-full bg-foreground"
         />
       </motion.div>
     </>

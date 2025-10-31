@@ -33,7 +33,7 @@ const ImageShowcase = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
             Creative Showcase
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -65,7 +65,7 @@ const ImageShowcase = () => {
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
-                className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary-glow/20 to-accent/20 backdrop-blur-[2px]"
+                className="absolute inset-0 bg-foreground/10 backdrop-blur-[2px]"
               />
 
               {/* Interactive corners */}
@@ -81,7 +81,7 @@ const ImageShowcase = () => {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="absolute w-12 h-12 border-t-2 border-l-2 border-primary"
+                  className="absolute w-12 h-12 border-t-2 border-l-2 border-foreground"
                   style={position}
                 />
               ))}
@@ -98,7 +98,7 @@ const ImageShowcase = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl"
+              className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-foreground/10 blur-2xl"
             />
             <motion.div
               animate={{
@@ -110,7 +110,7 @@ const ImageShowcase = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-gradient-to-br from-accent/20 to-primary-glow/20 blur-2xl"
+              className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-foreground/10 blur-2xl"
             />
           </motion.div>
 
@@ -127,7 +127,7 @@ const ImageShowcase = () => {
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-3 p-4 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center font-bold text-sm">
                   01
                 </div>
                 <div>
@@ -142,7 +142,7 @@ const ImageShowcase = () => {
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-3 p-4 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-glow to-accent flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-accent text-background flex items-center justify-center font-bold text-sm">
                   02
                 </div>
                 <div>
@@ -157,7 +157,7 @@ const ImageShowcase = () => {
                 whileHover={{ x: 10 }}
                 className="flex items-start gap-3 p-4 rounded-xl border border-border/50 bg-card/50 backdrop-blur hover:shadow-elegant transition-all"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-muted text-foreground flex items-center justify-center font-bold text-sm">
                   03
                 </div>
                 <div>
