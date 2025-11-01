@@ -63,7 +63,7 @@ const About = () => {
                   >
                     <div className="space-y-3">
                       <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-6 h-6 text-primary-foreground" />
+                        <Icon className="w-6 h-6 text-primary-foreground dark:text-gray-400" />
                       </div>
                       <h3 className="font-semibold text-foreground">{item.title}</h3>
                       <p className="text-sm text-muted-foreground">{item.description}</p>

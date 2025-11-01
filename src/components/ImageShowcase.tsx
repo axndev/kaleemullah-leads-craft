@@ -41,7 +41,7 @@ const ImageShowcase = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row justify-center gap-8 items-center max-w-6xl mx-auto">
           {/* Interactive Image Section */}
           <motion.div
             style={{ y: springY, scale }}
@@ -50,12 +50,12 @@ const ImageShowcase = () => {
             <motion.div
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ duration: 0.4 }}
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant backdrop-blur"
+              className="relative aspect-[1/1] rounded-2xl overflow-hidden shadow-elegant backdrop-blur max-w-[280px]"
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Replace this src with your image */}
               <img
-                src="/placeholder.svg"
+                src="/Ahsan.jpg"
                 alt="Showcase"
                 className="w-full h-full object-cover"
               />
