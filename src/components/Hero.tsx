@@ -70,7 +70,7 @@ const Hero = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                className="w-full sm:w-auto group text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
+                className="w-full sm:w-auto group text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 dark:hover:bg-white/70"
                 onClick={() => scrollToSection("contact")}
               >
                 Let&apos;s Work Together

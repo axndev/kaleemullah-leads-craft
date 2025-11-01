@@ -142,7 +142,7 @@ const ContactForm = () => {
                 type="submit" 
                 size="lg"
                 disabled={isSubmitting}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto dark:hover:bg-white/70" 
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send className="ml-2 h-5 w-5" />

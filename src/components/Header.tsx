@@ -96,7 +96,7 @@ const Header = () => {
 
             <Button
               size="sm"
-              className="hidden sm:inline-flex"
+              className="hidden sm:inline-flex dark:hover:bg-white/70"
               onClick={() => scrollToSection("#contact")}
             >
               Get in Touch

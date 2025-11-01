@@ -72,7 +72,7 @@ const Footer = () => {
                 <p>kaleemullahahsan0@gmail.com</p>
                 <p>Available for freelance opportunities</p>
                 <Button 
-                  className="mt-4 bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
+                  className="mt-4 hover:shadow-glow-primary transition-all duration-300 dark:hover:bg-white/70"
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Start a Project

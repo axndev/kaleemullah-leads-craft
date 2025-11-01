@@ -55,7 +55,7 @@ const Services = () => {
                   <div className="space-y-6">
                     <div className="flex items-start justify-between">
                       <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                        <Icon className="w-8 h-8 text-primary-foreground" />
+                        <Icon className="w-8 h-8 text-primary-foreground dark:text-gray-400" />
                       </div>
                       <div className="text-sm font-medium text-muted-foreground">0{index + 1}</div>
                     </div>

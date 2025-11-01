@@ -29,7 +29,7 @@ const About = () => {
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16 lg:space-y-20">
           {/* Header */}
-          <div className="text-center space-y-4 animate-scroll-fade">
+          <div className="lg:text-center space-y-4 animate-scroll-fade">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               About Me
             </h2>
